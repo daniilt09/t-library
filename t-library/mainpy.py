@@ -225,7 +225,7 @@ def search(library):
     search = input("Введите название, автора или ID книги:").strip().lower()
 
     for book in library:
-        if str(book.get("id")) == search or book.get("Название") == search or book.get("Автор") == search:
+        if str(book.get("id")) == search or book.get("Название").strip().lower() == search or book.get("Автор").strip().lower() == search:
             res = book
             break
 
